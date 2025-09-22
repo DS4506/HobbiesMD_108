@@ -5,28 +5,21 @@
 //  Created by Willie Earl on 9/15/25.
 //
 
+//
+//  HobbiesApp.swift
+//  Hobbies
+//
+
 import SwiftUI
-import SwiftData
 
 @main
 struct HobbiesApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    private let persistence = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfileScreen()
+                .environment(\.managedObjectContext, persistence.container.viewContext)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

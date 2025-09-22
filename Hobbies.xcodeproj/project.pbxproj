@@ -11,6 +11,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		47AB6D6C2E8119CD00484249 /* Theme */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		47C236852E78F99B00ABDDA2 /* Hobbies */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Hobbies;
@@ -34,6 +39,7 @@
 			children = (
 				47C236852E78F99B00ABDDA2 /* Hobbies */,
 				47C236842E78F99B00ABDDA2 /* Products */,
+				47AB6D6C2E8119CD00484249 /* Theme */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +67,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				47AB6D6C2E8119CD00484249 /* Theme */,
 				47C236852E78F99B00ABDDA2 /* Hobbies */,
 			);
 			name = Hobbies;
