@@ -5,15 +5,18 @@
 //  Created by Willie Earl on 9/15/25.
 //
 
+//
+//  HobbiesApp.swift
+//  Hobbies
+//
+
 import SwiftUI
 
 @main
 struct HobbiesApp: App {
-    let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            ProfileAndHobbiesView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ProfileView() // defined in ProfileAndHobbiesView.swift
         }
     }
 }
